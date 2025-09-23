@@ -26,12 +26,14 @@ public class TelemetryService {
         // 1. Save telemetry
         Telemetry telemetry = new Telemetry();
 
+        telemetry.setVehId(dto.getVehId());
         telemetry.setLatitude(dto.getLatitude());
         telemetry.setLongitude(dto.getLongitude());
         telemetry.setSpeed(dto.getSpeed());
         telemetry.setHeading(dto.getHeading());
         telemetry.setTs(now);
         telemetryRepository.save(telemetry);
+
 
     }
 }

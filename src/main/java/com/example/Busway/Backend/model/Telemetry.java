@@ -9,12 +9,19 @@ public class Telemetry {
 
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
+ @Column(name="telemetry_id")
  private Integer id;
 
+ @Column(name="bus_id")
  private Integer vehId;
+
+ @Column(name="trip_id")
+ private Integer tripId;
  private Double latitude;
  private Double longitude;
  private Float speed;
+ private Float accuracy;
+
  private Float heading;
  private LocalDateTime ts = LocalDateTime.now();
  public Integer getId() {
@@ -59,7 +66,14 @@ public class Telemetry {
  public void setTs(LocalDateTime ts) {
 	this.ts = ts;
  }
- public Telemetry(Integer id, Integer vehId, Double latitude, Double longitude, Float speed, Float heading,
+
+ public Integer getTripId() {
+	return tripId;
+}
+ public void setTripId(Integer tripId) {
+	this.tripId = tripId;
+ }
+public Telemetry(Integer id, Integer vehId, Double latitude, Double longitude, Float speed, Float heading,
 		LocalDateTime ts) {
 	super();
 	this.id = id;
@@ -73,7 +87,10 @@ public class Telemetry {
  public Telemetry() {
 	// TODO Auto-generated constructor stub
  }
-
- // Getters & Setters
- // ...
+ public Float getAccuracy() {
+	return accuracy;
+ }
+ public void setAccuracy(Float accuracy) {
+	this.accuracy = accuracy;
+ }
 }
