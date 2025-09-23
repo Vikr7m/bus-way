@@ -28,6 +28,6 @@ public class LocationController {
 	@PostMapping("/location")
 	public String receiveTelemetry(@RequestBody TelemetryDTO dto) {
         telemetryService.saveTelemetry(dto);
-        return "Location received and updated";
+        return "Location received";
     }
 }
