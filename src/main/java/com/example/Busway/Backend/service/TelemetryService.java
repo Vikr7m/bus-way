@@ -20,7 +20,7 @@ public class TelemetryService {
     @Autowired
     private CurrentLocationRepository currentLocationRepository;
 
-    public void updateCurrentLocation(TelemetryDTO dto) {
+    public void saveTelemetry(TelemetryDTO dto) {
         LocalDateTime now = LocalDateTime.now();
 
         // 1. Save telemetry
@@ -33,8 +33,8 @@ public class TelemetryService {
         telemetry.setHeading(dto.getHeading());
         telemetry.setTs(now);
         telemetryRepository.save(telemetry);
-
-
     }
+    
+    public void 
 }
 
