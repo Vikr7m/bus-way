@@ -35,6 +35,8 @@ public class TelemetryService {
         telemetryRepository.save(telemetry);
     }
     
-    public void 
+    public String updateCuurentLocation() {
+    	return "success";
+    }
 }
 
