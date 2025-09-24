@@ -3,9 +3,9 @@ package com.example.Busway.Backend.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.Busway.Backend.DTO.TelemetryDTO;
 import com.example.Busway.Backend.model.CurrentLocation;
 import com.example.Busway.Backend.model.Telemetry;
-import com.example.Busway.Backend.model.TelemetryDTO;
 import com.example.Busway.Backend.repository.CurrentLocationRepository;
 import com.example.Busway.Backend.repository.TelemetryRepository;
 
@@ -38,5 +38,7 @@ public class TelemetryService {
     public String updateCuurentLocation() {
     	return "success";
     }
+    
+    
 }
 

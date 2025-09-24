@@ -1,4 +1,4 @@
-package com.example.Busway.Backend.model;
+package com.example.Busway.Backend.DTO;
 
 
 import org.antlr.v4.runtime.misc.NotNull;

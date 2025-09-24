@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Busway.Backend.model.TelemetryDTO;
+import com.example.Busway.Backend.DTO.TelemetryDTO;
 import com.example.Busway.Backend.service.TelemetryService;
 
 
