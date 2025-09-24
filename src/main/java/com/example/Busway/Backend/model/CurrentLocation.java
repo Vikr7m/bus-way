@@ -17,8 +17,6 @@ public class CurrentLocation {
     @Column(name = "trip_id", nullable = false)
     private Integer tripId;
 
-    @Column(name = "ts", nullable = false)
-    private LocalDateTime ts;
 
     @Column(name = "latitude", nullable = false)
     private Double latitude;
@@ -43,11 +41,10 @@ public class CurrentLocation {
     public CurrentLocation() {}
 
     // All-args constructor
-    public CurrentLocation(Integer busId, Integer tripId, LocalDateTime ts, Double latitude, Double longitude,
+    public CurrentLocation(Integer busId, Integer tripId,  Double latitude, Double longitude,
                            Float speed, Float heading, Float accuracy, LocalDateTime updatedAt) {
         this.busId = busId;
         this.tripId = tripId;
-        this.ts = ts;
         this.latitude = latitude;
         this.longitude = longitude;
         this.speed = speed;
@@ -62,9 +59,6 @@ public class CurrentLocation {
 
     public Integer getTripId() { return tripId; }
     public void setTripId(Integer tripId) { this.tripId = tripId; }
-
-    public LocalDateTime getTs() { return ts; }
-    public void setTs(LocalDateTime ts) { this.ts = ts; }
 
     public Double getLatitude() { return latitude; }
     public void setLatitude(Double latitude) { this.latitude = latitude; }

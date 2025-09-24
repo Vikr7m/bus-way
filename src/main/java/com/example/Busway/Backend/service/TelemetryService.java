@@ -41,8 +41,8 @@ public class TelemetryService {
     }
     
     public String updateCuurentLocation(TelemetryDTO dto) {
-    	Instant currentInstant = Instant.now();
-    	currentLocationRepository.updateLocationByBusId(dto.getVehId(), currentInstant, dto.getLatitude(), dto.getLongitude(), dto.getSpeed(), dto.getHeading());
+    	LocalDateTime currentInstant = LocalDateTime.now();
+    	currentLocationRepository.updateLocationByBusId(dto.getVehId(), dto.getLatitude(), dto.getLongitude(), dto.getSpeed(), dto.getHeading(), currentInstant);
     	saveTelemetry(dto);
     	return "success";
     }
