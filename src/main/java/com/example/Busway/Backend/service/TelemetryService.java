@@ -8,7 +8,9 @@ import com.example.Busway.Backend.model.CurrentLocation;
 import com.example.Busway.Backend.model.Telemetry;
 import com.example.Busway.Backend.repository.CurrentLocationRepository;
 import com.example.Busway.Backend.repository.TelemetryRepository;
+import com.example.Busway.Backend.repository.TripRepository;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 
 @Service
@@ -19,6 +21,9 @@ public class TelemetryService {
 
     @Autowired
     private CurrentLocationRepository currentLocationRepository;
+    
+    @Autowired
+    private TripRepository tripRepository;
 
     public void saveTelemetry(TelemetryDTO dto) {
         LocalDateTime now = LocalDateTime.now();
@@ -35,7 +40,10 @@ public class TelemetryService {
         telemetryRepository.save(telemetry);
     }
     
-    public String updateCuurentLocation() {
+    public String updateCuurentLocation(TelemetryDTO dto) {
+    	Instant currentInstant = Instant.now();
+    	currentLocationRepository.updateLocationByBusId(dto.getVehId(), currentInstant, dto.getLatitude(), dto.getLongitude(), dto.getSpeed(), dto.getHeading());
+    	saveTelemetry(dto);
     	return "success";
     }
     

@@ -1,5 +1,9 @@
 package com.example.Busway.Backend.repository;
 
-public interface StopRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.Busway.Backend.model.Stop;
+
+public interface StopRepository extends JpaRepository < Stop, Integer>{
 
 }
