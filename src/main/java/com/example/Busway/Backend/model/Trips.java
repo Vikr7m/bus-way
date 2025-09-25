@@ -18,8 +18,11 @@ public class Trips {
 
     @Column(name = "route_id", nullable = false)
     private Integer routeId;
+    
+    @Column(name = "trip_id")
+    private Integer driverId;
 
-    @Column(name = "start_time", nullable = false)
+	@Column(name = "start_time", nullable = false)
     private Timestamp startTime;
 
     @Column(name = "end_time")
@@ -60,6 +63,14 @@ public class Trips {
         this.routeId = routeId;
     }
 
+    public Integer getDriverId() {
+		return driverId;
+	}
+
+	public void setDriverId(Integer driverId) {
+		this.driverId = driverId;
+	}
+    
     public Timestamp getStartTime() {
         return startTime;
     }
