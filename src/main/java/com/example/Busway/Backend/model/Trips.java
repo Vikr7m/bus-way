@@ -31,6 +31,18 @@ public class Trips {
     @Enumerated(EnumType.STRING)
     @Column(name = "status", columnDefinition = "enum('Scheduled','Ongoing','Completed','Cancelled') default 'Scheduled'")
     private Status status = Status.Scheduled;
+    
+    @Column(name = "days_count")
+    private Integer daysCount;
+    
+    @Column(name = "cond")
+    private String condition;
+    
+    @Column(name = "source_stop_id")
+    private String sourceStopId;
+    
+    @Column(name = "destination_stop_id")
+    private String destinationStopIs;
 
     // ===== Enum for Status =====
     public enum Status {
