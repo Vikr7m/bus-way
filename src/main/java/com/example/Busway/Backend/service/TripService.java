@@ -7,8 +7,8 @@ public class TripService {
 	
 	public String startTrip() {
 		
-		
 		return "success";
+		
 	}
 	
 }

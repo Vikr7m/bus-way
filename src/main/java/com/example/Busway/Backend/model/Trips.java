@@ -19,7 +19,7 @@ public class Trips {
     @Column(name = "route_id", nullable = false)
     private Integer routeId;
     
-    @Column(name = "trip_id")
+    @Column(name = "driver_id")
     private Integer driverId;
 
 	@Column(name = "start_time", nullable = false)

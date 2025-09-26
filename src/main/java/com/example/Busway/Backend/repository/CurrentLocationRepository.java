@@ -20,7 +20,7 @@ import java.util.List;
 public interface CurrentLocationRepository extends JpaRepository<CurrentLocation, CurrentLocationId> {
 
     // Optional: find current location by busId
-    List<CurrentLocation> findByBusId(Integer busId);
+    CurrentLocation findByBusId(Integer busId);
 
     // Optional: find current location by tripId
     List<CurrentLocation> findByTripId(Integer tripId);
