@@ -3,6 +3,7 @@ package com.example.Busway.Backend.DTO;
 public class BusDTO {
 	
 	private Integer busId;
+	private String busType;
 	private String regNo;
 	private String numberPlate;
 	private Integer capacity;
@@ -38,6 +39,12 @@ public class BusDTO {
 	}
 	public void setOccupnacy(Integer occupnacy) {
 		this.occupnacy = occupnacy;
+	}
+	public String getBusType() {
+		return busType;
+	}
+	public void setBusType(String busType) {
+		this.busType = busType;
 	}
 	
 	
