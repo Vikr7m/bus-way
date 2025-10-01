@@ -1,5 +1,7 @@
 package com.example.Busway.Backend.service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +31,14 @@ public class BusService {
 		return result;
 	}
 
+	
+	public List<BusDTO> getNearbyBusesBetails(List<Integer> nearbyBuses){
+		List<BusDTO> result =  new ArrayList<>();
+		for (Integer i : nearbyBuses) {
+			result.add(getBusDTODetails(i));
+		}
+		return result;
+	}
 	
 
 }
